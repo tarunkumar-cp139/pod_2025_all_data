@@ -1,0 +1,478 @@
+12:35:48 **** Build of configuration Debug_FLASH for project Tata_ace_chassis_vcu_code ****
+make -j8 all 
+Building file: ../Sources/apm_std.c
+Building file: ../Sources/can0.c
+Building file: ../Sources/can1.c
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Sources/apm_std.args" -MMD -MP -MF"Sources/apm_std.d" -MT"Sources/apm_std.o" -o "Sources/apm_std.o" "../Sources/apm_std.c"
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Sources/apm_std.args" -MMD -MP -MF"Sources/can0.d" -MT"Sources/can0.o" -o "Sources/can0.o" "../Sources/can0.c"
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Sources/apm_std.args" -MMD -MP -MF"Sources/can1.d" -MT"Sources/can1.o" -o "Sources/can1.o" "../Sources/can1.c"
+Building file: ../Sources/can2.c
+Building file: ../Sources/fault.c
+Building file: ../Sources/lptimer.c
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Sources/apm_std.args" -MMD -MP -MF"Sources/can2.d" -MT"Sources/can2.o" -o "Sources/can2.o" "../Sources/can2.c"
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Sources/apm_std.args" -MMD -MP -MF"Sources/fault.d" -MT"Sources/fault.o" -o "Sources/fault.o" "../Sources/fault.c"
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Sources/apm_std.args" -MMD -MP -MF"Sources/lptimer.d" -MT"Sources/lptimer.o" -o "Sources/lptimer.o" "../Sources/lptimer.c"
+../Sources/can0.c: In function 'can0_callback':
+../Sources/can0.c:148:36: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+              if((brake.data[2]>>6 )& (0x03) == 1){
+                                    ^
+../Sources/can0.c:151:42: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+              else if( (brake.data[2]>>6) &( 0x03 )== 0){
+                                          ^
+../Sources/can0.c:154:44: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+                 else if((brake.data[2]>>6) & (0x03) == 2){
+                                            ^
+../Sources/can0.c:115:5: warning: enumeration value 'FLEXCAN_EVENT_RXFIFO_COMPLETE' not handled in switch [-Wswitch]
+Building file: ../Sources/main.c
+     switch(eventType){
+     ^~~~~~
+../Sources/can0.c:115:5: warning: enumeration value 'FLEXCAN_EVENT_RXFIFO_WARNING' not handled in switch [-Wswitch]
+../Sources/can0.c:115:5: warning: enumeration value 'FLEXCAN_EVENT_RXFIFO_OVERFLOW' not handled in switch [-Wswitch]
+../Sources/can0.c:115:5: warning: enumeration value 'FLEXCAN_EVENT_TX_COMPLETE' not handled in switch [-Wswitch]
+Building file: ../Sources/pid.c
+../Sources/can0.c:115:5: warning: enumeration value 'FLEXCAN_EVENT_WAKEUP_TIMEOUT' not handled in switch [-Wswitch]
+../Sources/can0.c:115:5: warning: enumeration value 'FLEXCAN_EVENT_WAKEUP_MATCH' not handled in switch [-Wswitch]
+../Sources/can0.c:115:5: warning: enumeration value 'FLEXCAN_EVENT_SELF_WAKEUP' not handled in switch [-Wswitch]
+../Sources/can0.c:115:5: warning: enumeration value 'FLEXCAN_EVENT_DMA_COMPLETE' not handled in switch [-Wswitch]
+../Sources/can0.c:115:5: warning: enumeration value 'FLEXCAN_EVENT_DMA_ERROR' not handled in switch [-Wswitch]
+Invoking: Standard S32DS C Compiler
+../Sources/can0.c:115:5: warning: enumeration value 'FLEXCAN_EVENT_ERROR' not handled in switch [-Wswitch]
+../Sources/apm_std.c: In function 'radar_detection_check':
+../Sources/can0.c:108:79: warning: unused parameter 'buffIdx' [-Wunused-parameter]
+Invoking: Standard S32DS C Compiler
+ void can0_callback (uint8_t instance, flexcan_event_type_t eventType,uint32_t buffIdx, flexcan_state_t flexcanState)
+arm-none-eabi-gcc "@Sources/apm_std.args" -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -o "Sources/main.o" "../Sources/main.c"
+                                                                               ^~~~~~~
+../Sources/apm_std.c:123:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../Sources/can0.c: In function 'brake_released':
+../Sources/can0.c:79:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../Sources/can1.c: In function 'can1_callback':
+../Sources/can1.c:109:5: warning: enumeration value 'FLEXCAN_EVENT_RXFIFO_COMPLETE' not handled in switch [-Wswitch]
+     switch(eventType){
+     ^~~~~~
+../Sources/can1.c:109:5: warning: enumeration value 'FLEXCAN_EVENT_RXFIFO_WARNING' not handled in switch [-Wswitch]
+../Sources/can1.c:109:5: warning: enumeration value 'FLEXCAN_EVENT_RXFIFO_OVERFLOW' not handled in switch [-Wswitch]
+../Sources/can1.c:109:5: warning: enumeration value 'FLEXCAN_EVENT_TX_COMPLETE' not handled in switch [-Wswitch]
+arm-none-eabi-gcc "@Sources/apm_std.args" -MMD -MP -MF"Sources/pid.d" -MT"Sources/pid.o" -o "Sources/pid.o" "../Sources/pid.c"
+../Sources/can1.c:109:5: warning: enumeration value 'FLEXCAN_EVENT_WAKEUP_TIMEOUT' not handled in switch [-Wswitch]
+../Sources/can1.c:109:5: warning: enumeration value 'FLEXCAN_EVENT_WAKEUP_MATCH' not handled in switch [-Wswitch]
+../Sources/can1.c:109:5: warning: enumeration value 'FLEXCAN_EVENT_SELF_WAKEUP' not handled in switch [-Wswitch]
+../Sources/can1.c:109:5: warning: enumeration value 'FLEXCAN_EVENT_DMA_COMPLETE' not handled in switch [-Wswitch]
+../Sources/can1.c:109:5: warning: enumeration value 'FLEXCAN_EVENT_DMA_ERROR' not handled in switch [-Wswitch]
+../Sources/can1.c:109:5: warning: enumeration value 'FLEXCAN_EVENT_ERROR' not handled in switch [-Wswitch]
+../Sources/can1.c:102:79: warning: unused parameter 'buffIdx' [-Wunused-parameter]
+ void can1_callback (uint8_t instance, flexcan_event_type_t eventType,uint32_t buffIdx, flexcan_state_t flexcanState)
+                                                                               ^~~~~~~
+../Sources/can2.c: In function 'can2_callback':
+../Sources/can2.c:134:3: warning: enumeration value 'FLEXCAN_EVENT_RXFIFO_COMPLETE' not handled in switch [-Wswitch]
+   switch(eventType){
+   ^~~~~~
+../Sources/can2.c:134:3: warning: enumeration value 'FLEXCAN_EVENT_RXFIFO_WARNING' not handled in switch [-Wswitch]
+../Sources/can2.c:134:3: warning: enumeration value 'FLEXCAN_EVENT_RXFIFO_OVERFLOW' not handled in switch [-Wswitch]
+../Sources/can2.c:134:3: warning: enumeration value 'FLEXCAN_EVENT_TX_COMPLETE' not handled in switch [-Wswitch]
+../Sources/can2.c:134:3: warning: enumeration value 'FLEXCAN_EVENT_WAKEUP_TIMEOUT' not handled in switch [-Wswitch]
+../Sources/can2.c:134:3: warning: enumeration value 'FLEXCAN_EVENT_WAKEUP_MATCH' not handled in switch [-Wswitch]
+../Sources/can2.c:134:3: warning: enumeration value 'FLEXCAN_EVENT_SELF_WAKEUP' not handled in switch [-Wswitch]
+../Sources/can2.c:134:3: warning: enumeration value 'FLEXCAN_EVENT_DMA_COMPLETE' not handled in switch [-Wswitch]
+../Sources/can2.c:134:3: warning: enumeration value 'FLEXCAN_EVENT_DMA_ERROR' not handled in switch [-Wswitch]
+../Sources/can2.c:134:3: warning: enumeration value 'FLEXCAN_EVENT_ERROR' not handled in switch [-Wswitch]
+../Sources/can2.c:127:79: warning: unused parameter 'buffIdx' [-Wunused-parameter]
+ void can2_callback (uint8_t instance, flexcan_event_type_t eventType,uint32_t buffIdx, flexcan_state_t flexcanState)
+                                                                               ^~~~~~~
+Finished building: ../Sources/can0.c
+Finished building: ../Sources/apm_std.c
+Finished building: ../Sources/can1.c
+ 
+ 
+ 
+Finished building: ../Sources/fault.c
+Finished building: ../Sources/can2.c
+Finished building: ../Sources/lptimer.c
+../Sources/main.c: In function 'main':
+../Sources/main.c:110:39: warning: pointer targets in passing argument 2 of 'LPUART_DRV_SendData' differ in signedness [-Wpointer-sign]
+      LPUART_DRV_SendData(INST_LPUART1,tx_buff,strlen(tx_buff));
+                                       ^~~~~~~
+ 
+In file included from D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/Generated_Code/Cpu.h:65:0,
+                 from ../Sources/main.h:14,
+                 from ../Sources/main.c:27:
+D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/SDK/platform/drivers/inc/lpuart_driver.h:268:10: note: expected 'const uint8_t * {aka const unsigned char *}' but argument is of type 'char *'
+ 
+ status_t LPUART_DRV_SendData(uint32_t instance,
+          ^~~~~~~~~~~~~~~~~~~
+ 
+../Sources/main.c:117:38: warning: pointer targets in passing argument 2 of 'LPUART_DRV_SendData' differ in signedness [-Wpointer-sign]
+Building file: ../Sources/pin_config.c
+     LPUART_DRV_SendData(INST_LPUART1,tx_buff,strlen(tx_buff));
+                                      ^~~~~~~
+In file included from D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/Generated_Code/Cpu.h:65:0,
+                 from ../Sources/main.h:14,
+                 from ../Sources/main.c:27:
+D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/SDK/platform/drivers/inc/lpuart_driver.h:268:10: note: expected 'const uint8_t * {aka const unsigned char *}' but argument is of type 'char *'
+Building file: ../Sources/spi0.c
+ status_t LPUART_DRV_SendData(uint32_t instance,
+Building file: ../Sources/syst_clk.c
+          ^~~~~~~~~~~~~~~~~~~
+Finished building: ../Sources/pid.c
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Sources/apm_std.args" -MMD -MP -MF"Sources/spi0.d" -MT"Sources/spi0.o" -o "Sources/spi0.o" "../Sources/spi0.c"
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Sources/apm_std.args" -MMD -MP -MF"Sources/syst_clk.d" -MT"Sources/syst_clk.o" -o "Sources/syst_clk.o" "../Sources/syst_clk.c"
+ 
+Finished building: ../Sources/main.c
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Sources/apm_std.args" -MMD -MP -MF"Sources/pin_config.d" -MT"Sources/pin_config.o" -o "Sources/pin_config.o" "../Sources/pin_config.c"
+Building file: ../Sources/system_states.c
+ 
+Invoking: Standard S32DS C Compiler
+Building file: ../Sources/uart0.c
+arm-none-eabi-gcc "@Sources/apm_std.args" -MMD -MP -MF"Sources/system_states.d" -MT"Sources/system_states.o" -o "Sources/system_states.o" "../Sources/system_states.c"
+Building file: ../SDK/rtos/osif/osif_baremetal.c
+Invoking: Standard S32DS C Compiler
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Sources/apm_std.args" -MMD -MP -MF"Sources/uart0.d" -MT"Sources/uart0.o" -o "Sources/uart0.o" "../Sources/uart0.c"
+arm-none-eabi-gcc "@SDK/rtos/osif/osif_baremetal.args" -MMD -MP -MF"SDK/rtos/osif/osif_baremetal.d" -MT"SDK/rtos/osif/osif_baremetal.o" -o "SDK/rtos/osif/osif_baremetal.o" "../SDK/rtos/osif/osif_baremetal.c"
+Building file: ../SDK/platform/drivers/src/wdog/wdog_driver.c
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@SDK/platform/drivers/src/wdog/wdog_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/wdog/wdog_driver.d" -MT"SDK/platform/drivers/src/wdog/wdog_driver.o" -o "SDK/platform/drivers/src/wdog/wdog_driver.o" "../SDK/platform/drivers/src/wdog/wdog_driver.c"
+Building file: ../SDK/platform/drivers/src/wdog/wdog_hw_access.c
+../Sources/system_states.c: In function 'system_states':
+../Sources/system_states.c:78:40: warning: pointer targets in passing argument 2 of 'LPUART_DRV_SendData' differ in signedness [-Wpointer-sign]
+Finished building: ../Sources/syst_clk.c
+       LPUART_DRV_SendData(INST_LPUART1,tx_buff,strlen(tx_buff));
+                                        ^~~~~~~
+In file included from D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/Generated_Code/Cpu.h:65:0,
+                 from ../Sources/main.h:14,
+                 from ../Sources/system_states.h:10,
+                 from ../Sources/system_states.c:8:
+D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/SDK/platform/drivers/inc/lpuart_driver.h:268:10: note: expected 'const uint8_t * {aka const unsigned char *}' but argument is of type 'char *'
+Finished building: ../Sources/spi0.c
+ status_t LPUART_DRV_SendData(uint32_t instance,
+Invoking: Standard S32DS C Compiler
+          ^~~~~~~~~~~~~~~~~~~
+../Sources/system_states.c:145:40: warning: pointer targets in passing argument 2 of 'LPUART_DRV_SendData' differ in signedness [-Wpointer-sign]
+arm-none-eabi-gcc "@SDK/platform/drivers/src/wdog/wdog_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/wdog/wdog_hw_access.d" -MT"SDK/platform/drivers/src/wdog/wdog_hw_access.o" -o "SDK/platform/drivers/src/wdog/wdog_hw_access.o" "../SDK/platform/drivers/src/wdog/wdog_hw_access.c"
+       LPUART_DRV_SendData(INST_LPUART1,tx_buff,strlen(tx_buff));
+ 
+ 
+                                        ^~~~~~~
+In file included from D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/Generated_Code/Cpu.h:65:0,
+Finished building: ../Sources/pin_config.c
+                 from ../Sources/main.h:14,
+                 from ../Sources/system_states.h:10,
+                 from ../Sources/system_states.c:8:
+D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/SDK/platform/drivers/inc/lpuart_driver.h:268:10: note: expected 'const uint8_t * {aka const unsigned char *}' but argument is of type 'char *'
+Building file: ../SDK/platform/drivers/src/pins/pins_driver.c
+ status_t LPUART_DRV_SendData(uint32_t instance,
+Building file: ../SDK/platform/drivers/src/pins/pins_port_hw_access.c
+          ^~~~~~~~~~~~~~~~~~~
+../Sources/system_states.c:191:40: warning: pointer targets in passing argument 2 of 'LPUART_DRV_SendData' differ in signedness [-Wpointer-sign]
+ 
+       LPUART_DRV_SendData(INST_LPUART1,tx_buff,strlen(tx_buff));
+                                        ^~~~~~~
+In file included from D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/Generated_Code/Cpu.h:65:0,
+                 from ../Sources/main.h:14,
+                 from ../Sources/system_states.h:10,
+                 from ../Sources/system_states.c:8:
+D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/SDK/platform/drivers/inc/lpuart_driver.h:268:10: note: expected 'const uint8_t * {aka const unsigned char *}' but argument is of type 'char *'
+Invoking: Standard S32DS C Compiler
+ status_t LPUART_DRV_SendData(uint32_t instance,
+Invoking: Standard S32DS C Compiler
+          ^~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc "@SDK/platform/drivers/src/pins/pins_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/pins/pins_driver.d" -MT"SDK/platform/drivers/src/pins/pins_driver.o" -o "SDK/platform/drivers/src/pins/pins_driver.o" "../SDK/platform/drivers/src/pins/pins_driver.c"
+../Sources/system_states.c:235:46: warning: pointer targets in passing argument 2 of 'LPUART_DRV_SendData' differ in signedness [-Wpointer-sign]
+Finished building: ../Sources/uart0.c
+             LPUART_DRV_SendData(INST_LPUART1,tx_buff,strlen(tx_buff));
+Finished building: ../SDK/rtos/osif/osif_baremetal.c
+                                              ^~~~~~~
+arm-none-eabi-gcc "@SDK/platform/drivers/src/pins/pins_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/pins/pins_port_hw_access.d" -MT"SDK/platform/drivers/src/pins/pins_port_hw_access.o" -o "SDK/platform/drivers/src/pins/pins_port_hw_access.o" "../SDK/platform/drivers/src/pins/pins_port_hw_access.c"
+In file included from D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/Generated_Code/Cpu.h:65:0,
+                 from ../Sources/main.h:14,
+                 from ../Sources/system_states.h:10,
+ 
+ 
+                 from ../Sources/system_states.c:8:
+D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/SDK/platform/drivers/inc/lpuart_driver.h:268:10: note: expected 'const uint8_t * {aka const unsigned char *}' but argument is of type 'char *'
+Building file: ../SDK/platform/drivers/src/lpuart/lpuart_driver.c
+ status_t LPUART_DRV_SendData(uint32_t instance,
+Building file: ../SDK/platform/drivers/src/lpuart/lpuart_hw_access.c
+          ^~~~~~~~~~~~~~~~~~~
+Building file: ../SDK/platform/drivers/src/lpuart/lpuart_irq.c
+../Sources/system_states.c:270:44: warning: pointer targets in passing argument 2 of 'LPUART_DRV_SendData' differ in signedness [-Wpointer-sign]
+Invoking: Standard S32DS C Compiler
+           LPUART_DRV_SendData(INST_LPUART1,tx_buff,strlen(tx_buff));
+arm-none-eabi-gcc "@SDK/platform/drivers/src/lpuart/lpuart_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/lpuart/lpuart_driver.d" -MT"SDK/platform/drivers/src/lpuart/lpuart_driver.o" -o "SDK/platform/drivers/src/lpuart/lpuart_driver.o" "../SDK/platform/drivers/src/lpuart/lpuart_driver.c"
+                                            ^~~~~~~
+In file included from D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/Generated_Code/Cpu.h:65:0,
+Invoking: Standard S32DS C Compiler
+                 from ../Sources/main.h:14,
+                 from ../Sources/system_states.h:10,
+                 from ../Sources/system_states.c:8:
+D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/SDK/platform/drivers/inc/lpuart_driver.h:268:10: note: expected 'const uint8_t * {aka const unsigned char *}' but argument is of type 'char *'
+arm-none-eabi-gcc "@SDK/platform/drivers/src/lpuart/lpuart_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/lpuart/lpuart_hw_access.d" -MT"SDK/platform/drivers/src/lpuart/lpuart_hw_access.o" -o "SDK/platform/drivers/src/lpuart/lpuart_hw_access.o" "../SDK/platform/drivers/src/lpuart/lpuart_hw_access.c"
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@SDK/platform/drivers/src/lpuart/lpuart_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/lpuart/lpuart_irq.d" -MT"SDK/platform/drivers/src/lpuart/lpuart_irq.o" -o "SDK/platform/drivers/src/lpuart/lpuart_irq.o" "../SDK/platform/drivers/src/lpuart/lpuart_irq.c"
+ status_t LPUART_DRV_SendData(uint32_t instance,
+Finished building: ../SDK/platform/drivers/src/wdog/wdog_driver.c
+ 
+          ^~~~~~~~~~~~~~~~~~~
+../Sources/system_states.c:318:41: warning: pointer targets in passing argument 2 of 'LPUART_DRV_SendData' differ in signedness [-Wpointer-sign]
+        LPUART_DRV_SendData(INST_LPUART1,tx_buff,strlen(tx_buff));
+                                         ^~~~~~~
+In file included from D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/Generated_Code/Cpu.h:65:0,
+                 from ../Sources/main.h:14,
+                 from ../Sources/system_states.h:10,
+                 from ../Sources/system_states.c:8:
+D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/SDK/platform/drivers/inc/lpuart_driver.h:268:10: note: expected 'const uint8_t * {aka const unsigned char *}' but argument is of type 'char *'
+Building file: ../SDK/platform/drivers/src/lptmr/lptmr_driver.c
+ status_t LPUART_DRV_SendData(uint32_t instance,
+          ^~~~~~~~~~~~~~~~~~~
+../Sources/system_states.c:335:41: warning: pointer targets in passing argument 2 of 'LPUART_DRV_SendData' differ in signedness [-Wpointer-sign]
+        LPUART_DRV_SendData(INST_LPUART1,tx_buff,strlen(tx_buff));
+                                         ^~~~~~~
+In file included from D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/Generated_Code/Cpu.h:65:0,
+                 from ../Sources/main.h:14,
+                 from ../Sources/system_states.h:10,
+                 from ../Sources/system_states.c:8:
+D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/SDK/platform/drivers/inc/lpuart_driver.h:268:10: note: expected 'const uint8_t * {aka const unsigned char *}' but argument is of type 'char *'
+Invoking: Standard S32DS C Compiler
+ status_t LPUART_DRV_SendData(uint32_t instance,
+          ^~~~~~~~~~~~~~~~~~~
+../Sources/system_states.c:341:41: warning: pointer targets in passing argument 2 of 'LPUART_DRV_SendData' differ in signedness [-Wpointer-sign]
+arm-none-eabi-gcc "@SDK/platform/drivers/src/lptmr/lptmr_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/lptmr/lptmr_driver.d" -MT"SDK/platform/drivers/src/lptmr/lptmr_driver.o" -o "SDK/platform/drivers/src/lptmr/lptmr_driver.o" "../SDK/platform/drivers/src/lptmr/lptmr_driver.c"
+        LPUART_DRV_SendData(INST_LPUART1,tx_buff,strlen(tx_buff));
+                                         ^~~~~~~
+In file included from D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/Generated_Code/Cpu.h:65:0,
+                 from ../Sources/main.h:14,
+                 from ../Sources/system_states.h:10,
+                 from ../Sources/system_states.c:8:
+D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/SDK/platform/drivers/inc/lpuart_driver.h:268:10: note: expected 'const uint8_t * {aka const unsigned char *}' but argument is of type 'char *'
+ status_t LPUART_DRV_SendData(uint32_t instance,
+          ^~~~~~~~~~~~~~~~~~~
+../Sources/system_states.c:346:41: warning: pointer targets in passing argument 2 of 'LPUART_DRV_SendData' differ in signedness [-Wpointer-sign]
+        LPUART_DRV_SendData(INST_LPUART1,tx_buff,strlen(tx_buff));
+                                         ^~~~~~~
+In file included from D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/Generated_Code/Cpu.h:65:0,
+                 from ../Sources/main.h:14,
+                 from ../Sources/system_states.h:10,
+                 from ../Sources/system_states.c:8:
+D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/SDK/platform/drivers/inc/lpuart_driver.h:268:10: note: expected 'const uint8_t * {aka const unsigned char *}' but argument is of type 'char *'
+ status_t LPUART_DRV_SendData(uint32_t instance,
+          ^~~~~~~~~~~~~~~~~~~
+../Sources/system_states.c:352:41: warning: pointer targets in passing argument 2 of 'LPUART_DRV_SendData' differ in signedness [-Wpointer-sign]
+        LPUART_DRV_SendData(INST_LPUART1,tx_buff,strlen(tx_buff));
+                                         ^~~~~~~
+In file included from D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/Generated_Code/Cpu.h:65:0,
+                 from ../Sources/main.h:14,
+                 from ../Sources/system_states.h:10,
+                 from ../Sources/system_states.c:8:
+D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/SDK/platform/drivers/inc/lpuart_driver.h:268:10: note: expected 'const uint8_t * {aka const unsigned char *}' but argument is of type 'char *'
+ status_t LPUART_DRV_SendData(uint32_t instance,
+          ^~~~~~~~~~~~~~~~~~~
+../Sources/system_states.c:372:7: warning: implicit declaration of function 'fault_can_mesg' [-Wimplicit-function-declaration]
+       fault_can_mesg();
+       ^~~~~~~~~~~~~~
+../Sources/system_states.c:374:40: warning: pointer targets in passing argument 2 of 'LPUART_DRV_SendData' differ in signedness [-Wpointer-sign]
+       LPUART_DRV_SendData(INST_LPUART1,tx_buff,strlen(tx_buff));
+                                        ^~~~~~~
+In file included from D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/Generated_Code/Cpu.h:65:0,
+                 from ../Sources/main.h:14,
+                 from ../Sources/system_states.h:10,
+                 from ../Sources/system_states.c:8:
+D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/SDK/platform/drivers/inc/lpuart_driver.h:268:10: note: expected 'const uint8_t * {aka const unsigned char *}' but argument is of type 'char *'
+Finished building: ../SDK/platform/drivers/src/pins/pins_port_hw_access.c
+ status_t LPUART_DRV_SendData(uint32_t instance,
+          ^~~~~~~~~~~~~~~~~~~
+Finished building: ../SDK/platform/drivers/src/lpuart/lpuart_irq.c
+../Sources/system_states.c:380:40: warning: pointer targets in passing argument 2 of 'LPUART_DRV_SendData' differ in signedness [-Wpointer-sign]
+Finished building: ../SDK/platform/drivers/src/wdog/wdog_hw_access.c
+       LPUART_DRV_SendData(INST_LPUART1,tx_buff,strlen(tx_buff));
+                                        ^~~~~~~
+In file included from D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/Generated_Code/Cpu.h:65:0,
+ 
+                 from ../Sources/main.h:14,
+                 from ../Sources/system_states.h:10,
+                 from ../Sources/system_states.c:8:
+D:/Pod_2025/VCU_Codes/tata_ace_chassis_VCU_NXP_code_03_04_26/Tata_ace_chassis_vcu_code/SDK/platform/drivers/inc/lpuart_driver.h:268:10: note: expected 'const uint8_t * {aka const unsigned char *}' but argument is of type 'char *'
+ 
+ status_t LPUART_DRV_SendData(uint32_t instance,
+ 
+          ^~~~~~~~~~~~~~~~~~~
+Finished building: ../SDK/platform/drivers/src/pins/pins_driver.c
+Finished building: ../SDK/platform/drivers/src/lpuart/lpuart_hw_access.c
+Building file: ../SDK/platform/drivers/src/lptmr/lptmr_hw_access.c
+ 
+ 
+Invoking: Standard S32DS C Compiler
+Finished building: ../Sources/system_states.c
+arm-none-eabi-gcc "@SDK/platform/drivers/src/lptmr/lptmr_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/lptmr/lptmr_hw_access.d" -MT"SDK/platform/drivers/src/lptmr/lptmr_hw_access.o" -o "SDK/platform/drivers/src/lptmr/lptmr_hw_access.o" "../SDK/platform/drivers/src/lptmr/lptmr_hw_access.c"
+Finished building: ../SDK/platform/drivers/src/lpuart/lpuart_driver.c
+ 
+Finished building: ../SDK/platform/drivers/src/lptmr/lptmr_driver.c
+ 
+Building file: ../SDK/platform/drivers/src/lpspi/lpspi_hw_access.c
+ 
+Building file: ../SDK/platform/drivers/src/lpspi/lpspi_irq.c
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@SDK/platform/drivers/src/lpspi/lpspi_hw_access.args" -MMD -MP -MF"SDK/platform/drivers/src/lpspi/lpspi_hw_access.d" -MT"SDK/platform/drivers/src/lpspi/lpspi_hw_access.o" -o "SDK/platform/drivers/src/lpspi/lpspi_hw_access.o" "../SDK/platform/drivers/src/lpspi/lpspi_hw_access.c"
+Building file: ../SDK/platform/drivers/src/lpspi/lpspi_master_driver.c
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@SDK/platform/drivers/src/lpspi/lpspi_hw_access.args" -MMD -MP -MF"SDK/platform/drivers/src/lpspi/lpspi_irq.d" -MT"SDK/platform/drivers/src/lpspi/lpspi_irq.o" -o "SDK/platform/drivers/src/lpspi/lpspi_irq.o" "../SDK/platform/drivers/src/lpspi/lpspi_irq.c"
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@SDK/platform/drivers/src/lpspi/lpspi_hw_access.args" -MMD -MP -MF"SDK/platform/drivers/src/lpspi/lpspi_master_driver.d" -MT"SDK/platform/drivers/src/lpspi/lpspi_master_driver.o" -o "SDK/platform/drivers/src/lpspi/lpspi_master_driver.o" "../SDK/platform/drivers/src/lpspi/lpspi_master_driver.c"
+Building file: ../SDK/platform/drivers/src/lpspi/lpspi_shared_function.c
+Building file: ../SDK/platform/drivers/src/lpspi/lpspi_slave_driver.c
+Invoking: Standard S32DS C Compiler
+Finished building: ../SDK/platform/drivers/src/lptmr/lptmr_hw_access.c
+arm-none-eabi-gcc "@SDK/platform/drivers/src/lpspi/lpspi_hw_access.args" -MMD -MP -MF"SDK/platform/drivers/src/lpspi/lpspi_shared_function.d" -MT"SDK/platform/drivers/src/lpspi/lpspi_shared_function.o" -o "SDK/platform/drivers/src/lpspi/lpspi_shared_function.o" "../SDK/platform/drivers/src/lpspi/lpspi_shared_function.c"
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@SDK/platform/drivers/src/lpspi/lpspi_hw_access.args" -MMD -MP -MF"SDK/platform/drivers/src/lpspi/lpspi_slave_driver.d" -MT"SDK/platform/drivers/src/lpspi/lpspi_slave_driver.o" -o "SDK/platform/drivers/src/lpspi/lpspi_slave_driver.o" "../SDK/platform/drivers/src/lpspi/lpspi_slave_driver.c"
+ 
+Building file: ../SDK/platform/drivers/src/interrupt/interrupt_manager.c
+Building file: ../SDK/platform/drivers/src/flexcan/flexcan_driver.c
+Invoking: Standard S32DS C Compiler
+Building file: ../SDK/platform/drivers/src/flexcan/flexcan_hw_access.c
+Invoking: Standard S32DS C Compiler
+Finished building: ../SDK/platform/drivers/src/lpspi/lpspi_irq.c
+Invoking: Standard S32DS C Compiler
+Finished building: ../SDK/platform/drivers/src/lpspi/lpspi_hw_access.c
+arm-none-eabi-gcc "@SDK/platform/drivers/src/flexcan/flexcan_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/flexcan/flexcan_hw_access.d" -MT"SDK/platform/drivers/src/flexcan/flexcan_hw_access.o" -o "SDK/platform/drivers/src/flexcan/flexcan_hw_access.o" "../SDK/platform/drivers/src/flexcan/flexcan_hw_access.c"
+ 
+arm-none-eabi-gcc "@SDK/platform/drivers/src/flexcan/flexcan_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/flexcan/flexcan_driver.d" -MT"SDK/platform/drivers/src/flexcan/flexcan_driver.o" -o "SDK/platform/drivers/src/flexcan/flexcan_driver.o" "../SDK/platform/drivers/src/flexcan/flexcan_driver.c"
+arm-none-eabi-gcc "@SDK/platform/drivers/src/interrupt/interrupt_manager.args" -MMD -MP -MF"SDK/platform/drivers/src/interrupt/interrupt_manager.d" -MT"SDK/platform/drivers/src/interrupt/interrupt_manager.o" -o "SDK/platform/drivers/src/interrupt/interrupt_manager.o" "../SDK/platform/drivers/src/interrupt/interrupt_manager.c"
+ 
+Building file: ../SDK/platform/drivers/src/flexcan/flexcan_irq.c
+Building file: ../SDK/platform/drivers/src/edma/edma_driver.c
+Invoking: Standard S32DS C Compiler
+Invoking: Standard S32DS C Compiler
+Finished building: ../SDK/platform/drivers/src/lpspi/lpspi_shared_function.c
+arm-none-eabi-gcc "@SDK/platform/drivers/src/edma/edma_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/edma/edma_driver.d" -MT"SDK/platform/drivers/src/edma/edma_driver.o" -o "SDK/platform/drivers/src/edma/edma_driver.o" "../SDK/platform/drivers/src/edma/edma_driver.c"
+Finished building: ../SDK/platform/drivers/src/lpspi/lpspi_master_driver.c
+arm-none-eabi-gcc "@SDK/platform/drivers/src/flexcan/flexcan_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/flexcan/flexcan_irq.d" -MT"SDK/platform/drivers/src/flexcan/flexcan_irq.o" -o "SDK/platform/drivers/src/flexcan/flexcan_irq.o" "../SDK/platform/drivers/src/flexcan/flexcan_irq.c"
+ 
+ 
+Finished building: ../SDK/platform/drivers/src/lpspi/lpspi_slave_driver.c
+Building file: ../SDK/platform/drivers/src/edma/edma_hw_access.c
+ 
+Finished building: ../SDK/platform/drivers/src/interrupt/interrupt_manager.c
+Invoking: Standard S32DS C Compiler
+Building file: ../SDK/platform/drivers/src/edma/edma_irq.c
+arm-none-eabi-gcc "@SDK/platform/drivers/src/edma/edma_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/edma/edma_hw_access.d" -MT"SDK/platform/drivers/src/edma/edma_hw_access.o" -o "SDK/platform/drivers/src/edma/edma_hw_access.o" "../SDK/platform/drivers/src/edma/edma_hw_access.c"
+ 
+Invoking: Standard S32DS C Compiler
+Building file: ../SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.c
+Building file: ../SDK/platform/devices/S32K144/startup/system_S32K144.c
+arm-none-eabi-gcc "@SDK/platform/drivers/src/edma/edma_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/edma/edma_irq.d" -MT"SDK/platform/drivers/src/edma/edma_irq.o" -o "SDK/platform/drivers/src/edma/edma_irq.o" "../SDK/platform/drivers/src/edma/edma_irq.c"
+Invoking: Standard S32DS C Compiler
+Finished building: ../SDK/platform/drivers/src/flexcan/flexcan_irq.c
+arm-none-eabi-gcc "@SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.args" -MMD -MP -MF"SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.d" -MT"SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o" -o "SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o" "../SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.c"
+Finished building: ../SDK/platform/drivers/src/flexcan/flexcan_hw_access.c
+ 
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@SDK/platform/devices/S32K144/startup/system_S32K144.args" -MMD -MP -MF"SDK/platform/devices/S32K144/startup/system_S32K144.d" -MT"SDK/platform/devices/S32K144/startup/system_S32K144.o" -o "SDK/platform/devices/S32K144/startup/system_S32K144.o" "../SDK/platform/devices/S32K144/startup/system_S32K144.c"
+ 
+Finished building: ../SDK/platform/drivers/src/edma/edma_driver.c
+Finished building: ../SDK/platform/drivers/src/flexcan/flexcan_driver.c
+ 
+Finished building: ../SDK/platform/drivers/src/edma/edma_hw_access.c
+ 
+Finished building: ../SDK/platform/drivers/src/edma/edma_irq.c
+ 
+Building file: ../SDK/platform/devices/startup.c
+ 
+Building file: ../Project_Settings/Startup_Code/startup_S32K144.S
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@SDK/platform/devices/startup.args" -MMD -MP -MF"SDK/platform/devices/startup.d" -MT"SDK/platform/devices/startup.o" -o "SDK/platform/devices/startup.o" "../SDK/platform/devices/startup.c"
+Building file: ../Generated_Code/Cpu.c
+Invoking: Standard S32DS Assembler
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Project_Settings/Startup_Code/startup_S32K144.args" -o "Project_Settings/Startup_Code/startup_S32K144.o" "../Project_Settings/Startup_Code/startup_S32K144.S"
+Building file: ../Generated_Code/canCom1.c
+arm-none-eabi-gcc "@Generated_Code/Cpu.args" -MMD -MP -MF"Generated_Code/Cpu.d" -MT"Generated_Code/Cpu.o" -o "Generated_Code/Cpu.o" "../Generated_Code/Cpu.c"
+Finished building: ../SDK/platform/devices/S32K144/startup/system_S32K144.c
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Generated_Code/Cpu.args" -MMD -MP -MF"Generated_Code/canCom1.d" -MT"Generated_Code/canCom1.o" -o "Generated_Code/canCom1.o" "../Generated_Code/canCom1.c"
+ 
+Building file: ../Generated_Code/canCom2.c
+Building file: ../Generated_Code/canCom3.c
+Building file: ../Generated_Code/clockMan1.c
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Generated_Code/Cpu.args" -MMD -MP -MF"Generated_Code/canCom2.d" -MT"Generated_Code/canCom2.o" -o "Generated_Code/canCom2.o" "../Generated_Code/canCom2.c"
+Finished building: ../SDK/platform/devices/startup.c
+Finished building: ../Project_Settings/Startup_Code/startup_S32K144.S
+ 
+ 
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Generated_Code/Cpu.args" -MMD -MP -MF"Generated_Code/clockMan1.d" -MT"Generated_Code/clockMan1.o" -o "Generated_Code/clockMan1.o" "../Generated_Code/clockMan1.c"
+Invoking: Standard S32DS C Compiler
+Building file: ../Generated_Code/dmaController1.c
+Finished building: ../Generated_Code/Cpu.c
+Invoking: Standard S32DS C Compiler
+Finished building: ../SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.c
+arm-none-eabi-gcc "@Generated_Code/Cpu.args" -MMD -MP -MF"Generated_Code/dmaController1.d" -MT"Generated_Code/dmaController1.o" -o "Generated_Code/dmaController1.o" "../Generated_Code/dmaController1.c"
+ 
+arm-none-eabi-gcc "@Generated_Code/Cpu.args" -MMD -MP -MF"Generated_Code/canCom3.d" -MT"Generated_Code/canCom3.o" -o "Generated_Code/canCom3.o" "../Generated_Code/canCom3.c"
+ 
+Finished building: ../Generated_Code/canCom1.c
+Building file: ../Generated_Code/lpTmr1.c
+Building file: ../Generated_Code/lpspiCom1.c
+Finished building: ../Generated_Code/canCom2.c
+ 
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Generated_Code/Cpu.args" -MMD -MP -MF"Generated_Code/lpspiCom1.d" -MT"Generated_Code/lpspiCom1.o" -o "Generated_Code/lpspiCom1.o" "../Generated_Code/lpspiCom1.c"
+ 
+Finished building: ../Generated_Code/clockMan1.c
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Generated_Code/Cpu.args" -MMD -MP -MF"Generated_Code/lpTmr1.d" -MT"Generated_Code/lpTmr1.o" -o "Generated_Code/lpTmr1.o" "../Generated_Code/lpTmr1.c"
+ 
+Finished building: ../Generated_Code/dmaController1.c
+Building file: ../Generated_Code/lpuart1.c
+ 
+Finished building: ../Generated_Code/canCom3.c
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Generated_Code/Cpu.args" -MMD -MP -MF"Generated_Code/lpuart1.d" -MT"Generated_Code/lpuart1.o" -o "Generated_Code/lpuart1.o" "../Generated_Code/lpuart1.c"
+Building file: ../Generated_Code/pin_mux.c
+ 
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Generated_Code/Cpu.args" -MMD -MP -MF"Generated_Code/pin_mux.d" -MT"Generated_Code/pin_mux.o" -o "Generated_Code/pin_mux.o" "../Generated_Code/pin_mux.c"
+Building file: ../Generated_Code/watchdog1.c
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Generated_Code/Cpu.args" -MMD -MP -MF"Generated_Code/watchdog1.d" -MT"Generated_Code/watchdog1.o" -o "Generated_Code/watchdog1.o" "../Generated_Code/watchdog1.c"
+Finished building: ../Generated_Code/lpspiCom1.c
+Finished building: ../Generated_Code/lpTmr1.c
+ 
+ 
+Finished building: ../Generated_Code/pin_mux.c
+Finished building: ../Generated_Code/lpuart1.c
+ 
+ 
+Finished building: ../Generated_Code/watchdog1.c
+ 
+Building target: Tata_ace_chassis_vcu_code.elf
+Invoking: Standard S32DS C Linker
+arm-none-eabi-gcc -o "Tata_ace_chassis_vcu_code.elf" "@Tata_ace_chassis_vcu_code.args"   
+Finished building target: Tata_ace_chassis_vcu_code.elf
+ 
+Invoking: Standard S32DS Create Flash Image
+arm-none-eabi-objcopy -O srec Tata_ace_chassis_vcu_code.elf  "Tata_ace_chassis_vcu_code.srec"
+Invoking: Standard S32DS Print Size
+arm-none-eabi-size --format=berkeley Tata_ace_chassis_vcu_code.elf
+   text	   data	    bss	    dec	    hex	filename
+  48200	   1872	   4984	  55056	   d710	Tata_ace_chassis_vcu_code.elf
+Finished building: Tata_ace_chassis_vcu_code.siz
+ 
+Finished building: Tata_ace_chassis_vcu_code.srec
+ 
+
+12:35:52 Build Finished (took 4s.590ms)
+

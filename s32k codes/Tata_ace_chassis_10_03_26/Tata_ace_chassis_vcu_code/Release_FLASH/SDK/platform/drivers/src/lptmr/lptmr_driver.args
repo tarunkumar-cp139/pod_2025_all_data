@@ -1,0 +1,34 @@
+-std=c99
+-DCPU_S32K144HFT0VLLT
+-DCPU_S32K144
+-DTURN_ON_CPU0
+-DSTART_FROM_FLASH
+-I"D:/Pod_2025/s32k codes/Tata_ace_chassis_10_03_26/Tata_ace_chassis_vcu_code/include"
+-I"D:/Pod_2025/s32k codes/Tata_ace_chassis_10_03_26/Tata_ace_chassis_vcu_code/Generated_Code"
+-I"D:/Pod_2025/s32k codes/Tata_ace_chassis_10_03_26/Tata_ace_chassis_vcu_code/Sources"
+-I"D:/Pod_2025/s32k codes/Tata_ace_chassis_10_03_26/Tata_ace_chassis_vcu_code/SDK/platform/drivers/src/clock/S32K1xx"
+-I"D:/Pod_2025/s32k codes/Tata_ace_chassis_10_03_26/Tata_ace_chassis_vcu_code/SDK/platform/devices"
+-I"D:/Pod_2025/s32k codes/Tata_ace_chassis_10_03_26/Tata_ace_chassis_vcu_code/SDK/platform/devices/common"
+-I"D:/Pod_2025/s32k codes/Tata_ace_chassis_10_03_26/Tata_ace_chassis_vcu_code/SDK/platform/devices/S32K144/include"
+-I"D:/Pod_2025/s32k codes/Tata_ace_chassis_10_03_26/Tata_ace_chassis_vcu_code/SDK/platform/devices/S32K144/startup"
+-I"D:/Pod_2025/s32k codes/Tata_ace_chassis_10_03_26/Tata_ace_chassis_vcu_code/SDK/platform/drivers/inc"
+-I"D:/Pod_2025/s32k codes/Tata_ace_chassis_10_03_26/Tata_ace_chassis_vcu_code/SDK/rtos/osif/"
+-O1
+-g
+-pedantic
+-Wall
+-Wextra
+-c
+-fmessage-length=0
+-funsigned-bitfields
+-ffunction-sections
+-fdata-sections
+-fno-common
+-Wunused
+-mcpu=cortex-m4
+-mthumb
+-mfloat-abi=hard
+-mfpu=fpv4-sp-d16
+-specs=nano.specs
+-specs=nosys.specs
+--sysroot="C:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib"
